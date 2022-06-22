@@ -6,3 +6,6 @@
 * di perbaiki kalau dahh tau cara yang bener 🗿
 
 ## 🌐
+Demo : https://dimstry.github.io/todo-list/
+
+## 💙
