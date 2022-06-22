@@ -2,8 +2,6 @@ const input = document.getElementById('my_input');
 const my_button = document.querySelector('.my_button');
 const list = document.querySelector('.list');
 
-// Function hapus
-
 my_button.addEventListener("click", function() {
   const card = document.createElement('div');
   card.setAttribute('class', 'card_list');
@@ -14,9 +12,22 @@ my_button.addEventListener("click", function() {
   card.appendChild(p);
   input.value = '';
   const button = document.createElement('button');
-  const textButton = document.createTextNode('hapus')
+  const textButton = document.createTextNode('hapus');
   button.setAttribut = 'type', 'button';
-  button.classList.add('button');
-  button.appendChild(textButton)
+  button.setAttribute('class', 'button');
+  button.appendChild(textButton);
   card.appendChild(button);
+});
+
+
+list.addEventListener("click", function(e) {
+  if (e.target.className === 'button') {
+    const yakin = confirm('yakin dek?');
+    if (yakin) {
+      const hasil = e.target.parentElement.remove();
+      setTimeout(function() {
+        alert('anjay ka hapus')
+      }, 200);
+    }
+  }
 });
